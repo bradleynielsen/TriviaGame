@@ -2,17 +2,20 @@
 // $( document ).ready(function() {  
     var answers = [
         {Question_1: {
+            question_text: "text"
             answer_array: ["A0", "A1", "A2", "A3"],
-            answer_index: answers.Question_1.ansArr[i]
+            answer_index: answers[0].ansArr[i]
         }},
         {Question_2: {
+            question_text: "text"
             answer_array: ["A0", "A1", "A2", "A3"],
-            answer_index: answers.Question_2.ansArr[i]
+            answer_index: answers[1].ansArr[i]
         }},
 
         {Question_3: {
+            question_text: "text"
             answer_array: ["A0","A1","A2","A3"],
-            answer_index: answers.Question_3.ansArr[i]
+            answer_index: answers.[2].ansArr[i]
         }}
     ];
 
