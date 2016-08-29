@@ -1,38 +1,24 @@
 // A $( document ).ready() block.
-$( document ).ready(function() {
-    
+// $( document ).ready(function() {  
+    var answers = [
+        {Question_1: {
+            answer_array: ["A0", "A1", "A2", "A3"],
+            answer_index: answers.Question_1.ansArr[i]
+        }},
+        {Question_2: {
+            answer_array: ["A0", "A1", "A2", "A3"],
+            answer_index: answers.Question_2.ansArr[i]
+        }},
 
+        {Question_3: {
+            answer_array: ["A0","A1","A2","A3"],
+            answer_index: answers.Question_3.ansArr[i]
+        }}
+    ];
 
-
-var answers = {
-    Q1: {
-        answer_array: ["A0","A1","A2","A3"],
-        answer_index: ansIdx=[answers.Q1.ansArr[i]
-    },
-
-    Q2: {
-        answer_array: ["A0","A1","A2","A3"],
-        answer_index: ansIdx=[answers.Q1.ansArr[i]
+    for (var i = answers.length - 1; i >= 0; i--) {
+        answers[i]
     }
-};
-
-
-
- // 
- //        
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -93,5 +79,3 @@ var answers = {
 
 
 
-
-});

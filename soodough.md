@@ -1,20 +1,12 @@
-# TriviaGame
-Week 5 Assignment
-Week 5 Assignment
 
-Overview
+ JavaScript for the logic  
+ jQuery to manipulate HTML
+ HTML
+ CSS
 
-In this assignment, You'll create a Trivia game using JavaScript for the logic and jQuery to manipulate HTML. Be sure to layout this app with valid HTML and stylish CSS.
+<!-- Create a GitHub repo called TriviaGame, then clone the repo to your computer. -->
 
-Remember
-
-You will be fully capable of doing this homework by the end of Saturday's class.
-
-Before You Begin
-
-Create a GitHub repo called TriviaGame, then clone the repo to your computer.
-
-Create a file inside of the TriviaGame folder called index.html. This is where you'll mark up all of your HTML.
+<!-- Create a file inside of the TriviaGame folder called index.html. This is where you'll mark up all of your HTML. -->
 
 Don't forget to include a script tag with the jQuery library.
 Create a folder inside of the TriviaGame folder called assets.
