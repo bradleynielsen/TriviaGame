@@ -1,8 +1,20 @@
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    
+
+
+
 var answers = {
     Q1: {
         answer_array: ["A0","A1","A2","A3"],
         answer_index: ansIdx=[answers.Q1.ansArr[i]
     },
+
+    Q2: {
+        answer_array: ["A0","A1","A2","A3"],
+        answer_index: ansIdx=[answers.Q1.ansArr[i]
+    }
+};
 
 
 
@@ -82,3 +94,4 @@ var answers = {
 
 
 
+});
