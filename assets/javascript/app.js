@@ -23,6 +23,7 @@ $(document).ready( function() {
     var r = 0;
     var correct = false;
 
+
 // ACTIONS AND CLICKS
 
     // CLICK: WELCOME BUTTON
@@ -34,17 +35,13 @@ $(document).ready( function() {
        $("#question").text(answers[r].question_text);
        // $(".choiceBtn").on(click, checkAnswers);              
     });
+  
 
-    // give the answer buttons the click fn()
-    $( ".choiceBtn" ).click(function() {      
-       checkAnswer()
-      
-    });    
 
 // FUNCTIONS
     // fn() ADD BUTTONS TO THE ANSWER DIV 
     function createButtons(i) {
-        var newBtn = $("<button class='btn btn-outline-primary choiceBtn'>");
+        var newBtn = $("<button class='btn btn-outline-primary choiceBtn answerButton'>");
             console.log(newBtn);
 
         var btnText = answers[r].answer_array[i];
@@ -56,8 +53,15 @@ $(document).ready( function() {
         // adds the index of the answer to the button
         newBtn.attr("data-answerIndex", ansIndex)
             .text(btnText)
+            .click(function() {      
+                console.log("checking answers")
+                checkAnswer(r);
+             })
+
         $("#answers").append(newBtn);
         $("#answers").append("<span>");
+
+          
     };
 
 
@@ -84,12 +88,27 @@ $(document).ready( function() {
 
     // fn(): check answers
         function checkAnswer(r) {
-            console.log(answers[r].answer_index);
+            console.log("r="+r);
             var answrIndex = answers[r].answer_index;
-            console.log(answrIndex);
+            console.log("answrIndex="+answrIndex);
+            var choiceIndex = $(this).data("answerIndex");
+            console.log("answrIndex="+answrIndex);
+            // if answrIndex ===
 
         }
 
+    //Display
+
+    // fn(): start timer
+        function startTimer() {
+
+        }
+
+    // fn(): start timer
+        function resetTimer() {
+            setTimeout(buttonAlert, 3000);
+            
+        }
 
 
 });
