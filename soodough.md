@@ -5,6 +5,13 @@ You'll create a trivia game that shows only one question until the player answer
 
 If the player selects the correct answer, show a screen congratulating them for choosing the right option. After a few seconds, display the next question -- do this without user input.
 *******************************splash screenFn()*****************************************
+	
+
+
+	*Both
+		r++
+		display explination
+		
 	*Correct
 	*Incorrect
 		-wrong
@@ -22,6 +29,9 @@ If the player selects the correct answer, show a screen congratulating them for 
 			-correct answers, 
 			-incorrect answers, 
 		-option to restart the game
+
+
+	*	
 
 
 

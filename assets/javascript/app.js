@@ -2,8 +2,8 @@ $(document).ready( function() {
 // VARIABLES
     var answers = [   
         {   
-            question_text: "question text 1",
-            answer_array: ["A0", "A1", "A2", "A3"],
+            question_text: "Taxation is ___.",
+            answer_array: ["a voluntary contribution to state revenue", "certain as death", "theft", "justified under implied contract"],
             answer_index: 2
         },
         {    
@@ -47,15 +47,16 @@ $(document).ready( function() {
             console.log(btnText);
         
         //this is the index to store in the button to check the correct
-        var ansIndex = i; 
+        var iIndex = i; 
 
         // adds the index of the answer to the button
-        newBtn.attr("data-answerIndex", ansIndex)
+        newBtn.attr("data-answerIndex", iIndex)
             .text(btnText)
             .click(function() {      
                 console.log("checking answers")
-                checkAnswer(r);
-                buttonClicked()
+                var choiceIndex = $(this).data("answerIndex");
+                console.log("choiceIndex1="+choiceIndex);
+                checkAnswer(r,choiceIndex);
              })
         $("#answers").append(newBtn);
         $("#answers").append("<span>");          
@@ -74,11 +75,7 @@ $(document).ready( function() {
                 createButtons(i);
             }
         };
-        function buttonClicked() {
-            // delayButtonAlert = setTimeout( 3000);
-            var thisThing = $(this).data("answerIndex");
-            console.log("This thing:"+thisThing);
-        }
+        
 
         // // Clear the timeout.
         // function cancelButtonAlert() {
@@ -86,15 +83,15 @@ $(document).ready( function() {
         // }
 
     // fn(): check answers
-        function checkAnswer(r) {
+        function checkAnswer(r, choiceIndex) {
             console.log("r="+r);
-            var answrIndex = answers[r].answer_index;
-            console.log("answrIndex="+answrIndex);
-            var choiceIndex = $(this).data("answerIndex");
+            var answerIndex = answers[r].answer_index;
+            console.log("answerIndex="+answerIndex);
+            // var choiceIndex = $(this).data("answerIndex");
             console.log("choiceIndex="+choiceIndex);
 
 
-            // if answrIndex === choiceIndex
+            // if answerIndex === choiceIndex
                     // run the win fn()
                 // else
                     // run the fail fn()
