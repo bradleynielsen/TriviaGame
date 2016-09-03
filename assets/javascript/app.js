@@ -43,15 +43,16 @@ function createButtons(i) {
     var ansIndex = i; /*this is the index to store in the button to check the correct*/
 
     // adds the index of the answer to the button
-    newBtn.attr("data-answerIndex", ansIndex).text(btnText);
-    
-
-
-
-
-  
-
-
+    newBtn.attr("data-answerIndex", ansIndex)
+    .text(btnText);
+    .addclass(choiceBtn);
 }
 
 
+function clearButtons() {
+    $("#answers").empty();
+}
+
+$( "#welcomBtn" ).click(function() {
+  alert( "Handler for .click() called." );
+});
