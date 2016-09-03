@@ -3,7 +3,7 @@ $(document).ready( function() {
     var answers = [   
         {   
             question_text: "question text 1",
-            answer_array: ["anser 1", "A1", "A2", "A3"],
+            answer_array: ["A0", "A1", "A2", "A3"],
             answer_index: 2
         },
         {    
@@ -22,7 +22,7 @@ $(document).ready( function() {
 //VARIABLES
     var r = 0;
     var correct = false;
-
+    // var questionTimeout = setTimeout();
 
 // ACTIONS AND CLICKS
 
@@ -42,7 +42,6 @@ $(document).ready( function() {
     // fn() ADD BUTTONS TO THE ANSWER DIV 
     function createButtons(i) {
         var newBtn = $("<button class='btn btn-outline-primary choiceBtn answerButton'>");
-            console.log(newBtn);
 
         var btnText = answers[r].answer_array[i];
             console.log(btnText);
@@ -56,12 +55,10 @@ $(document).ready( function() {
             .click(function() {      
                 console.log("checking answers")
                 checkAnswer(r);
+                buttonClicked()
              })
-
         $("#answers").append(newBtn);
-        $("#answers").append("<span>");
-
-          
+        $("#answers").append("<span>");          
     };
 
 
@@ -78,7 +75,9 @@ $(document).ready( function() {
             }
         };
         function buttonClicked() {
-            delayButtonAlert = setTimeout( 3000);
+            // delayButtonAlert = setTimeout( 3000);
+            var thisThing = $(this).data("answerIndex");
+            console.log("This thing:"+thisThing);
         }
 
         // // Clear the timeout.
@@ -92,8 +91,16 @@ $(document).ready( function() {
             var answrIndex = answers[r].answer_index;
             console.log("answrIndex="+answrIndex);
             var choiceIndex = $(this).data("answerIndex");
-            console.log("answrIndex="+answrIndex);
-            // if answrIndex ===
+            console.log("choiceIndex="+choiceIndex);
+
+
+            // if answrIndex === choiceIndex
+                    // run the win fn()
+                // else
+                    // run the fail fn()
+
+
+            r++;
 
         }
 
