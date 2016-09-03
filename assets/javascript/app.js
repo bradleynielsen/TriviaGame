@@ -5,17 +5,21 @@ $(document).ready( function() {
             question_text: "Taxation is ___.",
             answer_array: ["a voluntary contribution to state revenue", "certain as death", "theft", "justified under implied contract"],
             answer_index: 2
+            answer_display: "Taxation is theft because it is not voluntary; it is taken at gunpoint."
+
         },
         {    
             question_text: "question text 2",
             answer_array: ["A0", "A1", "A2", "A3"],
-            answer_index: 3
+            answer_index: 3,
+            answer_display: 
         },
 
         {
             question_text: "question text 3",
             answer_array: ["A0","A1","A2","A3"],
-            answer_index: 1
+            answer_index: 1,
+            answer_display: 
         }
     ];
 
@@ -57,6 +61,7 @@ $(document).ready( function() {
                 var choiceIndex = $(this).data("answerIndex");
                 console.log("choiceIndex1="+choiceIndex);
                 checkAnswer(r,choiceIndex);
+
              })
         $("#answers").append(newBtn);
         $("#answers").append("<span>");          
@@ -97,11 +102,21 @@ $(document).ready( function() {
                     // run the fail fn()
 
 
-            r++;
+           
 
         }
 
-    //Display
+    // CORRECT ANSWER
+        function correct (){
+
+            $("#answers").empty();
+            var displayCorrect = answers.answer_display
+            console.log 
+            $("#answers").append();
+             r++;
+
+
+        }
 
     // fn(): start timer
         function startTimer() {
